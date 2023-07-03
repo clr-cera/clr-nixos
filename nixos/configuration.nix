@@ -11,8 +11,18 @@
     ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+	efi.canTouchEfiVariables = true;
+	efi.efiSysMountPoint = "/boot";
+	
+	grub = {
+	  devices = [ "nodev" ];
+	  efiSupport = true;
+	  enable = true;
+	  useOSProber = true;
+	  configurationLimit = 5;
+	};
+  };
 
   networking.hostName = "muse"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -77,16 +87,39 @@
   # };
 
   # Settings
-  nix{
+  nix = {
     registry = lib.mapAttrs (_: value: {flake = value; }) inputs;
-    nixPATH = lib.mapAttrsToList (key: value: "${key}=${value.to.path}") config.nix.registry;
+    nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}") config.nix.registry;
 
     settings = {	
   	experimental-features = "nix-command flakes";
 	auto-optimise-store = true;
     };
 
+    gc = {
+	automatic = true;
+	dates = "weekly";
+	options = "--delete-older-than 2d";
+
+
+    };
+  };
+
+
   # List services that you want to enable:
+  services.xserver = {
+	enable = true;
+
+	displayManager = {
+		lightdm = {
+			enable = true;
+			greeters.slick ={
+				enable = true;
+			};	
+		};
+	};
+  };
+
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

@@ -9,6 +9,7 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
+    ./dot
   ];
 
   nixpkgs = {
@@ -44,6 +45,9 @@
   [
   steam
   cava
+  lutris
+  libgccjit
+  gh
   ];
 
   # Enable home-manager and git
