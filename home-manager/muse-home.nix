@@ -31,7 +31,10 @@
       allowUnfree = true;
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
       allowUnfreePredicate = (_: true);
-    };
+      permittedInsecurePackages = [
+                "openssl-1.1.1u"
+              ];
+	};
   };
 
   home = {
@@ -51,11 +54,17 @@
   peaclock
   ranger
   kitty
+  vivaldi
+  github-desktop
+  gnome.gnome-keyring
   ];
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
   programs.git.enable = true;
+
+  # Gnome Keyring
+  services.gnome-keyring.enable = true;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

@@ -27,6 +27,19 @@
   networking.hostName = "muse"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
+  #Bluetooth
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
+  #Sound
+  sound.enable = true;
+  services.pipewire = {
+	enable = true;
+	alsa.enable = true;
+	pulse.enable = true;
+	jack.enable = true;
+  };
+
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -105,6 +118,8 @@
   };
 
 
+
+
   # List services that you want to enable:
   services.xserver = {
 	enable = true;
@@ -132,6 +147,9 @@
 	};
   };
 
+  nixpkgs.config.permittedInsecurePackages = [
+  	"openssl-1.1.1u"
+  ];
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
