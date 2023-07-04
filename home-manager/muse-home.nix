@@ -48,6 +48,9 @@
   lutris
   libgccjit
   gh
+  peaclock
+  ranger
+  kitty
   ];
 
   # Enable home-manager and git
