@@ -12,4 +12,6 @@
 	github-desktop
   ];
 
+  i18n.inputMethod.enabled = "fcitx5";
+
 }

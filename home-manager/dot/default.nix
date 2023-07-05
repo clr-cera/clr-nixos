@@ -52,7 +52,26 @@
     #kitty
     ".config/kitty/".source = config.lib.file.mkOutOfStoreSymlink ./files/kitty;
 
+    #ranger
+    ".config/ranger/".source = config.lib.file.mkOutOfStoreSymlink ./files/ranger;
+    
+    #btop
+    ".config/btop/".source = config.lib.file.mkOutOfStoreSymlink ./files/btop;
 
+    #cava
+    ".config/cava/".source = config.lib.file.mkOutOfStoreSymlink ./files/cava;
+
+    #neofetch
+    ".config/neofetch/".source = config.lib.file.mkOutOfStoreSymlink ./files/neofetch;
+
+    #rofi
+    ".config/rofi/".source = config.lib.file.mkOutOfStoreSymlink ./files/rofi;
+
+    #zathura
+    ".config/zathura/".source = config.lib.file.mkOutOfStoreSymlink ./files/zathura;
+  
+
+    
 
 
 
