@@ -10,6 +10,10 @@
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
     ./dot
+    ./desktop
+    ./common
+    ./studies
+    ./play
   ];
 
   nixpkgs = {
@@ -46,25 +50,15 @@
   # programs.neovim.enable = true;
   home.packages = with pkgs;
   [
-  steam
-  cava
-  lutris
-  libgccjit
-  gh
-  peaclock
-  ranger
   kitty
-  vivaldi
-  github-desktop
-  gnome.gnome-keyring
   ];
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
   programs.git.enable = true;
 
-  # Gnome Keyring
-  services.gnome-keyring.enable = true;
+
+
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

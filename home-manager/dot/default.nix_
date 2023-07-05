@@ -1,7 +1,13 @@
 { pkgs, inputs, ... }:
 {
   imports = [
-  ./btop.nix	
+
 
   ];
+
+  home.packages = with pkgs;
+  [
+	btop
+  ];
+
 }

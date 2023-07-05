@@ -84,8 +84,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  git
-  neovim
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   ];
@@ -118,7 +116,9 @@
   };
 
 
-
+  #Gnome keyring
+  services.gnome.gnome-keyring.enable = true;
+  services.passSecretService.enable = true;
 
   # List services that you want to enable:
   services.xserver = {
