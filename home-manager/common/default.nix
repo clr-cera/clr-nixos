@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 {
   imports = [
-
+    ./fish.nix
 
   ];
 

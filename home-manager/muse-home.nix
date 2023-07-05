@@ -50,7 +50,6 @@
   # programs.neovim.enable = true;
   home.packages = with pkgs;
   [
-  kitty
   ];
 
   # Enable home-manager and git
