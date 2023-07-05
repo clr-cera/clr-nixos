@@ -9,11 +9,12 @@
 		fish_greeting = "";
 		sht = "shutdown now";
 		picoms = "picom & disown";
-
-
-
-
 	};
+
+	interactiveShellInit = ''
+		fish_add_path --append ~/.local/bin
+	'';
+
 
 
   };

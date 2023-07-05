@@ -6,7 +6,7 @@
 
   home.packages = with pkgs;
   [
-  	spotify
+  spotify
 	discord
 	vivaldi
 	github-desktop

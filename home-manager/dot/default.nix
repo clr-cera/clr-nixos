@@ -3,6 +3,10 @@
   imports = [
   ];
 
+
+  fonts.fontconfig.enable = true;
+
+
   home.packages = with pkgs;
   [
 	kitty
@@ -18,6 +22,29 @@
 	nitrogen
 	neofetch
 	hyfetch
+	zathura
+
+	(pkgs.nerdfonts.override { fonts = 
+	[ 
+	"FiraCode"  
+	"RobotoMono"
+	]
+	;})
+	sarasa-gothic
+
+
+
   ];
+
+  home.file = {
+    ".config/awesome/rc.lua".source = config.lib.file.mkOutOfStoreSymlink ./files/rc.lua;
+    ".config/awesome/clrawesome.lua".source = config.lib.file.mkOutOfStoreSymlink ./files/clrawesome.lua;
+
+
+
+
+  }
+
+
 
 }

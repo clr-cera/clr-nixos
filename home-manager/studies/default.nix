@@ -7,7 +7,7 @@
 
   home.packages = with pkgs;
   [
-	libgccjit
+	gcc
 	gh
 	neovim
   ];

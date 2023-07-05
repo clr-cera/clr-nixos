@@ -10,6 +10,12 @@
 	zip
 	unzip
 	ranger
+	gnumake
+	xclip
+	binutils
   ];
+
+
+
 
 }
