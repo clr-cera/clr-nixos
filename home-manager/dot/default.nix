@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, config,... }:
 {
   imports = [
   ];
@@ -39,11 +39,12 @@
   home.file = {
     ".config/awesome/rc.lua".source = config.lib.file.mkOutOfStoreSymlink ./files/rc.lua;
     ".config/awesome/clrawesome.lua".source = config.lib.file.mkOutOfStoreSymlink ./files/clrawesome.lua;
+    ".peaclock/config".source = config.lib.file.mkOutOfStoreSymlink ./files/peaclockConfig;
 
 
 
 
-  }
+  };
 
 
 
