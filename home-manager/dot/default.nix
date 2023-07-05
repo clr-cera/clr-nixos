@@ -41,6 +41,9 @@
     ".config/awesome/rc.lua".source = config.lib.file.mkOutOfStoreSymlink ./files/awesome/rc.lua;
     ".config/awesome/clrawesome.lua".source = config.lib.file.mkOutOfStoreSymlink ./files/awesome/clrawesome.lua;
     
+    #picom
+    ".config/picom/picom.conf".source = config.lib.file.mkOutOfStoreSymlink ./files/picom/picom.conf;
+    
     #peaclock
     ".peaclock/config".source = config.lib.file.mkOutOfStoreSymlink ./files/peaclock/peaclockConfig;
     
