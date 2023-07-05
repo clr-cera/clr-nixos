@@ -37,9 +37,9 @@
   ];
 
   home.file = {
-    ".config/awesome/rc.lua".source = config.lib.file.mkOutOfStoreSymlink ./files/rc.lua;
-    ".config/awesome/clrawesome.lua".source = config.lib.file.mkOutOfStoreSymlink ./files/clrawesome.lua;
-    ".peaclock/config".source = config.lib.file.mkOutOfStoreSymlink ./files/peaclockConfig;
+    ".config/awesome/rc.lua".source = config.lib.file.mkOutOfStoreSymlink ./files/awesome/rc.lua;
+    ".config/awesome/clrawesome.lua".source = config.lib.file.mkOutOfStoreSymlink ./files/awesome/clrawesome.lua;
+    ".peaclock/config".source = config.lib.file.mkOutOfStoreSymlink ./files/peaclock/peaclockConfig;
 
 
 
