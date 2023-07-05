@@ -37,19 +37,21 @@
   ];
 
   home.file = {
-    #awesome
-    ".config/awesome/rc.lua".source = config.lib.file.mkOutOfStoreSymlink ./files/awesome/rc.lua;
-    ".config/awesome/clrawesome.lua".source = config.lib.file.mkOutOfStoreSymlink ./files/awesome/clrawesome.lua;
+    #awesome 
+    ".config/awesome/".source = config.lib.file.mkOutOfStoreSymlink ./files/awesome;
     
     #picom
-    ".config/picom/picom.conf".source = config.lib.file.mkOutOfStoreSymlink ./files/picom/picom.conf;
-    
+    ".config/picom/".source = config.lib.file.mkOutOfStoreSymlink ./files/picom;
+
+    #eww
+    ".config/eww/".source = config.lib.file.mkOutOfStoreSymlink ./files/eww;
+
     #peaclock
-    ".peaclock/config".source = config.lib.file.mkOutOfStoreSymlink ./files/peaclock/peaclockConfig;
+    ".peaclock/".source = config.lib.file.mkOutOfStoreSymlink ./files/peaclock;
     
     #kitty
-    ".config/kitty/kitty.conf".source = config.lib.file.mkOutOfStoreSymlink ./files/kitty/kitty.conf;
-    ".config/kitty/current-theme.conf".source = config.lib.file.mkOutOfStoreSymlink ./files/kitty/current-theme.conf;
+    ".config/kitty/".source = config.lib.file.mkOutOfStoreSymlink ./files/kitty;
+
 
 
 
