@@ -53,8 +53,14 @@
     ".config/kitty/".source = config.lib.file.mkOutOfStoreSymlink ./files/kitty;
 
     #ranger
-    ".config/ranger/".source = config.lib.file.mkOutOfStoreSymlink ./files/ranger;
-    
+    ".config/ranger/colorschemes/nixranger.py".source = config.lib.file.mkOutOfStoreSymlink ./files/ranger/colorschemes/nixranger.py;
+    ".config/ranger/plugins/ranger_devicons".source = config.lib.file.mkOutOfStoreSymlink ./files/ranger/plugins/ranger_devicons;    
+    ".config/ranger/rc.conf".source = config.lib.file.mkOutOfStoreSymlink ./files/ranger/rc.conf;
+    ".config/ranger/scope.sh".source = config.lib.file.mkOutOfStoreSymlink ./files/ranger/scope.sh;
+    ".config/ranger/rifle.conf".source = config.lib.file.mkOutOfStoreSymlink ./files/ranger/rifle.conf;
+    ".config/ranger/commands.py".source = config.lib.file.mkOutOfStoreSymlink ./files/ranger/commands.py;
+    ".config/ranger/commands_full.py".source = config.lib.file.mkOutOfStoreSymlink ./files/ranger/commands_full.py;
+
     #btop
     ".config/btop/".source = config.lib.file.mkOutOfStoreSymlink ./files/btop;
 
