@@ -7,11 +7,15 @@
   home.packages = with pkgs;
   [
   spotify
-	discord
-	vivaldi
-	github-desktop
+  discord
+  vivaldi
+  github-desktop
+  gimp-with-plugins
+  xfce.thunar
+  xfce.thunar-volman
   ];
 
-  i18n.inputMethod.enabled = "fcitx5";
 
+  i18n.inputMethod.enabled = "fcitx5";
+  
 }

@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./desktop/nvidia.nix
     ];
 
   # Bootloader.
@@ -150,6 +151,9 @@
   nixpkgs.config.permittedInsecurePackages = [
   	"openssl-1.1.1u"
   ];
+
+  #Gnome virtual file system for auto mount of pen drive
+  services.gvfs.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
