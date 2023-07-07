@@ -13,7 +13,7 @@
 (defwidget Projects []
   (box
     (eventbox
-      :onclick "vscodium ~/Documents/Projects/ & disown &"
+      :onclick "codium ~/Documents/Projects/ & disown &"
       (image
         :path "./assets/book.svg"
       )
@@ -24,7 +24,7 @@
 (defwidget fileManager []
   (box
     (eventbox
-      :onclick "kitty ranger ~/.config & disown &"
+      :onclick "kitty ~/clr-nixos/ & disown"
       (image
         :path "./assets/settings.svg"
       )

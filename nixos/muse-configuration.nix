@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./desktop/nvidia.nix
+      ./desktop/zenKernel.nix
     ];
 
   # Bootloader.
@@ -22,7 +23,7 @@
 	  enable = true;
 	  useOSProber = true;
 	  configurationLimit = 5;
-	};
+	  };
   };
 
   networking.hostName = "muse"; # Define your hostname.
