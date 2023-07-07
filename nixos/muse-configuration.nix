@@ -158,8 +158,8 @@
  #Trying to fix overscale
   services.xserver.dpi = 144;
   environment.variables = rec {
-    GDK_SCALE = "0.5";
-    GDK_DPI_SCALE = "0.5";
+    GDK_SCALE = "0.8";
+    GDK_DPI_SCALE = "0.8";
   };
 
   # Enable the OpenSSH daemon.

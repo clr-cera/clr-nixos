@@ -15,6 +15,7 @@
   xfce.thunar-volman
   telegram-desktop
   vscodium
+  pavucontrol
   ];
 
 
