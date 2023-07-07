@@ -13,6 +13,7 @@
 	gnumake
 	xclip
 	binutils
+  lshw
   ];
 
 
