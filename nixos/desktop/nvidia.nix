@@ -33,13 +33,4 @@
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
- 
-  #Trying to fix overscale
-  #services.xserver.dpi = 144;
-  #environment.variables = {
-    #GDK_SCALE = "0.5";
-  #};
-  
-
-
 }
