@@ -1,14 +1,13 @@
 { pkgs, inputs, ... }:
 {
   imports = [
-
-
+    ./steam.nix
   ];
 
   home.packages = with pkgs;
   [
-	steam
 	lutris
+  osu-lazer-bin
   ];
 
 }
