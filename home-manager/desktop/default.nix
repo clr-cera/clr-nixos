@@ -14,6 +14,7 @@
   xfce.thunar
   xfce.thunar-volman
   telegram-desktop
+  whatsapp-for-linux
   vscodium
   pavucontrol
   ];

@@ -23,6 +23,7 @@
 	neofetch
 	hyfetch
 	zathura
+  lxappearance
 
 	(pkgs.nerdfonts.override { fonts = 
 	[ 
@@ -35,6 +36,16 @@
 
 
   ];
+  
+  #cursor
+  home.pointerCursor = {
+
+      name = "Catppuccin-Mocha-Dark-Cursors";
+
+      package = pkgs.catppuccin-cursors.mochaDark;
+
+      size = 16;
+    };
 
   home.file = {
     #awesome 
@@ -76,8 +87,11 @@
     #zathura
     ".config/zathura/".source = config.lib.file.mkOutOfStoreSymlink ./files/zathura;
   
-
+    #GTK theme
+    ".local/share/themes/TokyoNight".source = config.lib.file.mkOutOfStoreSymlink ./files/TokyoNight-GTK/;
     
+    #GTK icons
+    ".local/share/icons/candy-icons".source = config.lib.file.mkOutOfStoreSymlink ./files/candy-icons-master/;
 
 
 
