@@ -1,12 +1,6 @@
 { pkgs, inputs, ... }:
 
-{
-
-  home.packages = with pkgs; [
-    python3
-  ];
-
-  let
+let
     my-python-packages = ps: with ps; [
       pygame
       pandas
@@ -14,9 +8,10 @@
       scikit-learn
       matplotlib
       seaborn
-      plotly-express
+      plotly
     ];
   in
+{
   home.packages = [
     (pkgs.python3.withPackages my-python-packages)
   ];
