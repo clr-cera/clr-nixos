@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./desktop/nvidia.nix
+      ./desktop/awesome.nix
     ];
 
   # Bootloader.
@@ -122,31 +123,8 @@
   services.passSecretService.enable = true;
 
   # List services that you want to enable:
-  services.xserver = {
-	enable = true;
-	excludePackages = with pkgs; [
-		xterm
-	];
 
 
-	displayManager = {
-		lightdm = {
-			enable = true;
-			greeters.slick ={
-				enable = true;
-			};	
-		};
-
-		defaultSession = "none+awesome";		
-	};
-	windowManager.awesome = {
-		enable = true;
-		luaModules = with pkgs.luaPackages; [
-			luarocks
-			luadbi-mysql
-		];	
-	};
-  };
 
   nixpkgs.config.permittedInsecurePackages = [
   	"openssl-1.1.1u"

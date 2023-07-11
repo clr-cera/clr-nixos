@@ -10,6 +10,7 @@
 	gcc
 	gh
 	neovim
+	python39
   ];
 
 }
