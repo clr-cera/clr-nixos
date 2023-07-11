@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 {
   imports = [
-
+    ./python.nix
 
   ];
 
@@ -10,7 +10,6 @@
 	gcc
 	gh
 	neovim
-	python39
   ];
 
 }
