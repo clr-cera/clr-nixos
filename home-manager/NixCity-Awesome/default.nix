@@ -88,10 +88,10 @@
     ".config/zathura/".source = config.lib.file.mkOutOfStoreSymlink ./files/zathura;
   
     #GTK theme
-    ".local/share/themes/TokyoNight".source = config.lib.file.mkOutOfStoreSymlink ./files/TokyoNight-GTK/;
+    ".local/share/themes/TokyoNight".source = config.lib.file.mkOutOfStoreSymlink ./files/TokyoNight-GTK;
     
     #GTK icons
-    ".local/share/icons/candy-icons".source = config.lib.file.mkOutOfStoreSymlink ./files/candy-icons-master/;
+    ".local/share/icons/candy-icons".source = config.lib.file.mkOutOfStoreSymlink ./files/candy-icons-master;
 
 
 
