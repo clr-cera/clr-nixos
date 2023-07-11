@@ -60,7 +60,7 @@
     ".config/eww/".source = config.lib.file.mkOutOfStoreSymlink ./files/eww;
 
     #peaclock
-    ".peaclock/".source = config.lib.file.mkOutOfStoreSymlink ./files/peaclock;
+    ".peaclock/config".source = config.lib.file.mkOutOfStoreSymlink ./files/peaclock/config;
     
     #kitty
     ".config/kitty/".source = config.lib.file.mkOutOfStoreSymlink ./files/kitty;
