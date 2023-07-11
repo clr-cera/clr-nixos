@@ -1,6 +1,8 @@
 { pkgs, inputs, config,... }:
+
 {
   imports = [
+    ./spicetify.nix
   ];
 
 
@@ -15,7 +17,7 @@
 	eww
 	btop
 	ranger
-	betterdiscord-installer
+	betterdiscordctl
 	cava
 	peaclock
 	arandr
@@ -45,7 +47,7 @@
       package = pkgs.catppuccin-cursors.mochaDark;
 
       size = 16;
-    };
+    };  
 
   home.file = {
     #awesome 
@@ -86,7 +88,10 @@
 
     #zathura
     ".config/zathura/".source = config.lib.file.mkOutOfStoreSymlink ./files/zathura;
-  
+    
+    #betterdiscord
+    ".config/BetterDiscord/themes/neo-tokyo-night.theme.css".source = config.lib.file.mkOutOfStoreSymlink ./files/BetterDiscord/themes/neo-tokyo-night.theme.css;
+    
     #GTK theme
     ".local/share/themes/TokyoNight".source = config.lib.file.mkOutOfStoreSymlink ./files/TokyoNight-GTK;
     
