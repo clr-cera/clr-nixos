@@ -14,6 +14,7 @@
 
     #spicetify!
     spicetify-nix.url = "github:the-argus/spicetify-nix";
+    
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs: {

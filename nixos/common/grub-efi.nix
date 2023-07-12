@@ -12,6 +12,7 @@
 	  enable = true;
 	  useOSProber = true;
 	  configurationLimit = 5;
-	  };
+	  splashImage = ./Wallpapers/wallpaper.png;
+    };
   };
 }
