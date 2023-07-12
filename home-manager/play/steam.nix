@@ -27,6 +27,4 @@ in
   home.sessionVariables = {
     STEAM_FRAME_FORCE_CLOSE="0";
   };
-
-
 }
