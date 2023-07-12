@@ -105,15 +105,13 @@
 
     settings = {	
   	experimental-features = "nix-command flakes";
-	auto-optimise-store = true;
+  	auto-optimise-store = true;
     };
 
     gc = {
-	automatic = true;
-	dates = "weekly";
-	options = "--delete-older-than 2d";
-
-
+  	automatic = true;
+	  dates = "weekly";
+	  options = "--delete-older-than 2d";
     };
   };
 
