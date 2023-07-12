@@ -10,21 +10,9 @@
       ./hardware-configuration.nix
       ./desktop/nvidia.nix
       ./desktop/awesome.nix
+      ./common/grub-efi.nix
+      ./play
     ];
-
-  # Bootloader.
-  boot.loader = {
-	efi.canTouchEfiVariables = true;
-	efi.efiSysMountPoint = "/boot";
-	
-	grub = {
-	  devices = [ "nodev" ];
-	  efiSupport = true;
-	  enable = true;
-	  useOSProber = true;
-	  configurationLimit = 5;
-	  };
-  };
 
   networking.hostName = "muse"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -121,7 +109,6 @@
   services.passSecretService.enable = true;
 
   # List services that you want to enable:
-
 
 
   nixpkgs.config.permittedInsecurePackages = [

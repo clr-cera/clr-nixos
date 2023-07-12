@@ -10,4 +10,6 @@
   osu-lazer-bin
   ];
 
+
+  services.joycond.enable = true;
 }
