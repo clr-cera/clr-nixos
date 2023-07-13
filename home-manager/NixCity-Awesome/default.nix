@@ -75,8 +75,7 @@
     ".config/ranger/commands_full.py".source = config.lib.file.mkOutOfStoreSymlink ./files/ranger/commands_full.py;
 
     #btop
-    ".config/btop/".source = config.lib.file.mkOutOfStoreSymlink ./files/btop;
-
+    ".config/btop/themes/nix.theme".source = config.lib.file.mkOutOfStoreSymlink ./files/btop/themes/nix.theme;
     #cava
     ".config/cava/".source = config.lib.file.mkOutOfStoreSymlink ./files/cava;
 
