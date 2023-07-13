@@ -2,11 +2,11 @@
 {
   imports = [
     ./steam.nix
+    ./lutris.nix
   ];
 
   home.packages = with pkgs;
   [
-	lutris
   osu-lazer-bin
   ];
 }
