@@ -1,8 +1,7 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, config, lib, ... }:
 {
   imports = [
     ./python.nix
-    ./vscode.nix
   ];
 
   home.packages = with pkgs;
@@ -10,6 +9,6 @@
 	gcc
 	gh
 	neovim
+  vscode
   ];
-
 }
