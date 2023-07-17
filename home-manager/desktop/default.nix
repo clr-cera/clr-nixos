@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 {
   imports = [
-    ./vscode.nix
+
   ];
 
   home.packages = with pkgs;
@@ -15,7 +15,6 @@
   telegram-desktop
   whatsapp-for-linux
   pavucontrol
-  javaPackages.openjfx19
   ];
 
 
