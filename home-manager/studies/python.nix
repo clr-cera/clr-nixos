@@ -9,6 +9,7 @@ let
       matplotlib
       seaborn
       plotly
+      pysimplegui
     ];
   in
 {

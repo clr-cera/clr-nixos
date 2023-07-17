@@ -13,7 +13,7 @@
 (defwidget Projects []
   (box
     (eventbox
-      :onclick "codium ~/Documents/Projects/ & disown &"
+      :onclick "code ~/Documents/Projects/ & disown &"
       (image
         :path "./assets/book.svg"
       )

@@ -14,8 +14,9 @@
   xfce.thunar-volman
   telegram-desktop
   whatsapp-for-linux
-  vscodium
+  vscode
   pavucontrol
+  javaPackages.openjfx19
   ];
 
 
