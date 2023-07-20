@@ -10,8 +10,6 @@
   vivaldi
   github-desktop
   gimp-with-plugins
-  xfce.thunar
-  xfce.thunar-volman
   telegram-desktop
   whatsapp-for-linux
   pavucontrol

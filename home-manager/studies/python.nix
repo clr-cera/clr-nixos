@@ -30,11 +30,14 @@ let
         }
       )
       pyttsx3
+      pyaudio
     ];
   in
 {
   home.packages = [
     (pkgs.python3.withPackages my-python-packages)
+    pkgs.arcanPackages.espeak
+    pkgs.flac
   ];
 
 }
