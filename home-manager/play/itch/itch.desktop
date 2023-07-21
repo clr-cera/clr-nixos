@@ -2,7 +2,7 @@
 Name=itch
 GenericName=Game Launcher
 Comment=A game launcher for Indie games. 
-TryExec=itch --no-sandbox
+TryExec=itch
 Exec=itch --no-sandbox
 Terminal=false
 Type=Application
