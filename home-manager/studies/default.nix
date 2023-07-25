@@ -7,7 +7,8 @@
   home.packages = with pkgs;
   [
 	gcc
-	gh
+  clang-tools
+  gh
 	neovim
   vscode
   ];

@@ -9,7 +9,6 @@
 		fish_greeting = "";
 		sht = "shutdown now";
 		picoms = "picom & disown";
-    itchs = "itch --no-sandbox";
 	};
 
 	interactiveShellInit = ''
