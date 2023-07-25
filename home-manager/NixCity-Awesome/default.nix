@@ -14,10 +14,6 @@
 	kitty
 	picom
 	rofi
-  xorg.libxcb
-  xorg.xcbutil
-  xorg.xcbutilwm
-  xcbutilxrm
   eww
 	btop
 	ranger

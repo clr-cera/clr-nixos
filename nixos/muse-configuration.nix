@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
       ./desktop/nvidia.nix
       ./desktop/awesome.nix
-      ./common/grub-efi.nix
+      ./common/default.nix
       ./play
     ];
 
