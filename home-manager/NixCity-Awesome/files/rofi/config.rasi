@@ -2,7 +2,7 @@ configuration {
   display-drun: "Applications:";
   display-window: "Windows:";
   drun-display-format: "{name}";
-  font: "Sarasa UI CL Medium 13";
+  font: "Inter Medium 13";
   modi: "window,run,drun";
   show-icons: true;
   icon-theme:"candy-icons";

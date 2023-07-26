@@ -107,7 +107,7 @@
   #Gnome keyring
   services.gnome.gnome-keyring.enable = true;
   services.passSecretService.enable = true;
-
+  security.pam.services.lightdm.enableGnomeKeyring = true;
   # List services that you want to enable:
 
 
