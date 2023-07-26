@@ -8,12 +8,6 @@
 		xterm
 	];
 
-  home.file = {
-    ".config/Wallpapers/lightdmWallpaper.jpg".source = config.lib.file.mkOutOfStoreSymlink ./Wallpapers/cybercity_girl.jpg;
-  };
-
-
-
 	displayManager = {
 		lightdm = {
 			enable = true;
