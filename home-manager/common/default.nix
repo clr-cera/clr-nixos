@@ -9,7 +9,8 @@
   [
 	zip
 	unzip
-	ranger
+  unrar
+  ranger
 	gnumake
 	xclip
 	binutils

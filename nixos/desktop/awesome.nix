@@ -17,16 +17,16 @@
         cursorTheme.name  = "Catpuccin-Mocha-Dark-Cursors";
         cursorTheme.package = pkgs.catppuccin-cursors.mochaDark;
         
-        theme.name = "TokyoNight";
+#        theme.name = "TokyoNight";
         
-        extraConfig = 
-        ''
-        show-power=false
-        show-a11y=false
-        show-keyboard=false
-        show-clock=false 
-        background="/home/nix/.config/Wallpapers/lightdmWallpaper.jpg"
-        '';
+#        extraConfig = 
+#        ''
+#        show-power=false
+#        show-a11y=false
+#        show-keyboard=false
+#        show-clock=false 
+#        background="/home/nix/.config/Wallpapers/lightdmWallpaper.jpg"
+#        '';
 
 			};	
 		};
