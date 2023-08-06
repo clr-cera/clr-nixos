@@ -14,7 +14,7 @@
 			greeters.slick ={
 				enable = true;
 
-        cursorTheme.name  = "Catpuccin-Mocha-Dark-Cursors";
+#        cursorTheme.name  = "Catpuccin-Mocha-Dark-Cursors";
         cursorTheme.package = pkgs.catppuccin-cursors.mochaDark;
         
 #        theme.name = "TokyoNight";

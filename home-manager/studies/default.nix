@@ -2,14 +2,15 @@
 {
   imports = [
     ./python.nix
+    ./c.nix
+    ./haskell.nix
   ];
 
   home.packages = with pkgs;
   [
-	gcc
-  clang-tools
   gh
 	neovim
   vscode
+  notion-app-enhanced
   ];
 }
