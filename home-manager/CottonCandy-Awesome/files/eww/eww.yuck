@@ -1,0 +1,278 @@
+
+(defwidget play []
+  (box
+    (eventbox
+      :onclick "xdg-open https://www.netflix.com"
+      (image
+        :path "./assets/play.svg"
+      )
+    )
+  )
+)
+
+(defwidget Projects []
+  (box
+    (eventbox
+      :onclick "code ~/Documents/Projects/ & disown &"
+      (image
+        :path "./assets/book.svg"
+      )
+    )
+  )
+)
+
+(defwidget fileManager []
+  (box
+    (eventbox
+      :onclick "kitty ~/clr-nixos/ & disown"
+      (image
+        :path "./assets/settings.svg"
+      )
+    )
+  )
+)
+
+(defwidget music []
+  (box
+    (eventbox
+      :onclick "spotify & disown &"
+      (image
+        :path "./assets/music.svg"
+        
+      )
+    )
+  )
+)
+
+(defwidget github []
+  (box
+    (eventbox
+      :onclick "xdg-open https://github.com/clr-cera"
+      (image
+        :path "./assets/github.svg"
+      )
+    )
+  )
+)
+
+(defwidget battery []
+
+  (box
+    :orientation "v"
+    :spacing 1
+        (image
+          :path "./assets/battery.svg"
+          :xalign 1
+        )
+
+        (label
+          :class "bottomInfo"
+          :text "${EWW_BATTERY.BAT1.capacity}" 
+        )
+  )
+)
+
+(defwidget audio []
+
+
+    (box 
+      :orientation "v"
+      :spacing 2
+    
+      (image
+        :path "./assets/headphones.svg" 
+      )
+      (label
+        :class "bottomInfo"
+        :text "${replace(vol,"%","") ?:"不"}"
+      )
+    )
+)
+
+
+(defwidget shutdown []
+
+  (box
+    (eventbox
+      :onclick "shutdown now"
+      (image
+        :path "./assets/shutdown.svg"
+      )
+    )
+  )
+)
+
+(defwidget time []
+    (box
+        :orientation "v"
+        (label :text "${hour}")
+
+        (smallsep)
+
+        (label :text "${minute}")             
+
+        (smallsep)
+
+        (label :text "${second}")
+    )  
+
+)
+
+(defwidget weekdaywidget []
+    (box
+        :class "title"
+        (label
+          :text "${weekday}"
+          :xalign 0.5
+    )
+  )
+)
+
+(defwidget date []
+    (box
+        :orientation "v"
+        (label :text "${year}")
+
+        (smallsep)
+
+        (label :text "${replace(month,"月","")}")      
+        (label :text "月")        
+
+        (smallsep)
+
+        (label :text "${day}")
+
+    )
+)  
+
+
+
+(defwidget smallsep []
+  (box
+    :class "smallsep"
+    "- -"    
+  )
+)
+
+(defpoll hour :interval "1s"
+"date '+%H'" 
+)
+
+(defpoll minute :interval "1s"
+"date '+%M'"
+)
+
+(defpoll second :interval "1s"
+"date '+%S'"
+)
+
+(defpoll year :interval "15s"
+"date '+%y'"
+)
+
+(defpoll month :interval "15s"
+"date '+%B'"
+)
+
+(defpoll day :interval "15s"
+"date '+%d'"
+)
+
+(defpoll weekday :interval "15s"
+"date '+%a'"
+)
+
+(defpoll vol :interval "1s"
+"amixer sget Master | awk -F\"[][]\" '/Left:/ { print $2 }'"
+)
+
+
+
+(defwidget sep[]
+
+  "---"
+)
+
+(defwidget bottom []
+        (box
+            :orientation "v"
+            :valign "end"
+            :halign "center"
+            :space-evenly false
+            :spacing 2
+
+        (audio)
+        (sep)
+        (battery)
+        (sep)
+        (shutdown)
+    ""
+  )
+
+)
+(defwidget middle []
+        (box
+            :orientation "v"
+            :valign "center"
+            :halign "center"
+            :space-evenly false
+            :spacing 10
+        (time)
+        (sep)
+        (weekdaywidget)
+        (sep)
+        (date)
+
+
+
+  )
+)
+
+(defwidget top []
+        (box
+            :orientation "v"
+            :valign "start"
+            :halign "center"
+            :space-evenly false
+            :spacing 5
+        
+    "" 
+    (box
+      :orientation "v"
+      :spacing 8
+      (github)
+      (play)
+      (music)
+      (Projects)
+      (fileManager)
+      
+    )
+
+  )
+)
+
+
+(defwidget bar []
+        (box  :class "bar"
+              :orientation "v"
+              :vexpand "false"
+              :hexpand "false"
+              :active true
+    (top)
+    (middle)
+    (bottom)
+
+  )
+)
+
+(defwindow bar
+           :monitor 0
+           :geometry (geometry :x "-10px"
+                               :y "5%"
+                               :width "40px"
+                               :height "90%"
+                               :anchor "top right" )
+
+           :reserve (struts :distance "50px" :side "right")
+  
+(bar))

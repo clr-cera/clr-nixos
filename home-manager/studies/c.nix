@@ -6,4 +6,5 @@
   [
 	gcc
   clang-tools
+  ];
 }

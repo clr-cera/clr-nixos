@@ -1,0 +1,90 @@
+configuration {
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  drun-display-format: "{name}";
+  font: "Inter Medium 13";
+  modi: "window,run,drun";
+  show-icons: true;
+  icon-theme:"candy-icons";
+  window{
+    prefer-icon-theme:true;
+  }
+}
+
+@theme "/dev/null"
+
+* {
+  bg: #1a1b2666;
+  bg-alt: #1a1b2666;
+  bg-selected: #31324466;
+
+  fg: #c0caf5;
+  fg-alt: #c0caf5;
+
+  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  width: 25%;
+  background-color: @bg;
+}
+
+element {
+  padding: 8 12;
+  background-color: transparent;
+  text-color: @fg-alt;
+}
+
+element selected {
+  text-color: @fg;
+  background-color: @bg-selected;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+element-icon {
+  size: 2.0em;
+  padding: 0 10 0 0;
+  background-color: transparent;
+}
+element-index {
+  enabled: false;
+
+}
+
+entry {
+  padding: 12 12 12 20;
+  background-color: @bg-alt;
+  text-color: @fg;
+}
+
+inputbar {
+  children: [prompt, entry];
+  background-color: @bg;
+}
+
+listview {
+  background-color: @bg;
+  columns: 1;
+  lines: 6;
+}
+
+mainbox {
+  children: [inputbar, listview];
+  background-color: @bg;
+}
+
+prompt {
+  enabled: false;
+  padding: 12 0 0 12;
+  background-color: @bg-alt;
+  text-color: @fg;
+}
