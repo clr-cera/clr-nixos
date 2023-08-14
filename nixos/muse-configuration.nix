@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      ./muse-hardware-configuration.nix
       ./desktop/nvidia.nix
       ./desktop/awesome.nix
       ./common/default.nix
