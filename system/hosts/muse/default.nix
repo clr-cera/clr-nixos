@@ -19,7 +19,7 @@
       ../../desktop/GUI/displayManager/lightdm.nix
      
       # Users
-      ../../users/me!.nix
+      ../../users/mee.nix
     ];
 
   # Networking
