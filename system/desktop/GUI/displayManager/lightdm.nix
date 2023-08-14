@@ -3,7 +3,7 @@
 {
   imports =
     [ 
-      ./addons/gnomeKeyring.nix
+      ../addons/gnomeKeyring.nix
     ];
 
   services.xserver = {

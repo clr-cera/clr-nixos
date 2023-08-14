@@ -9,4 +9,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [ pkgs.home-manager ];
   };
+
+  programs.fish.enable = true;
+
 }
