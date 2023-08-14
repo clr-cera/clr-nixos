@@ -1,5 +1,5 @@
 {
-  description = "Your new nix config";
+  description = "My system configuration!";
 
   inputs = {
     # Nixpkgs
@@ -21,23 +21,21 @@
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs: {
-    # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
+      #muse
       muse = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; }; # Pass flake inputs to our config
-        # > Our main nixos configuration file <
-        modules = [ ./nixos/hosts/muse ];
-      };
+        specialArgs = { inherit inputs; }; 
+        modules = [ ./system/hosts/muse ];
+      };    
     };
 
-    # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
+      #muse
       "nix@muse" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = { inherit inputs; }; # Pass flake inputs to our config
-        # > Our main home-manager configuration file <
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; 
+        extraSpecialArgs = { inherit inputs; }; 
         modules = [ ./home-manager/muse-home.nix ];
       };
     };

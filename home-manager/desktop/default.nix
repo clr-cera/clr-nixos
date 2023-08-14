@@ -13,7 +13,6 @@
   telegram-desktop
   whatsapp-for-linux
   pavucontrol
-  qbittorrent
   feh
   ];
 
