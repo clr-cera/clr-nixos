@@ -27,7 +27,7 @@
       muse = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; }; # Pass flake inputs to our config
         # > Our main nixos configuration file <
-        modules = [ ./nixos/muse-configuration.nix ];
+        modules = [ ./nixos/hosts/muse ];
       };
     };
 

@@ -8,10 +8,10 @@
   imports =
     [ # Include the results of the hardware scan.
       ./muse-hardware-configuration.nix
-      ./desktop/nvidia.nix
-      ./desktop/awesome.nix
-      ./common/default.nix
-      ./play
+      ../../desktop/nvidia.nix
+      ../../desktop/awesome.nix
+      ../../common/default.nix
+      ../../play
     ];
 
   networking.hostName = "muse"; # Define your hostname.
