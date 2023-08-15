@@ -1,2 +1,2 @@
 # clr-nixos
-My system configuration.
+My system configuration!
