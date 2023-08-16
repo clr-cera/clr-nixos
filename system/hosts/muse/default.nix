@@ -29,7 +29,7 @@
   # Networking
   networking = {
     hostName = "muse";
-    useDHCP = true;
+#    useDHCP = true;
     
     interfaces.eth0 = {
       useDHCP = true;
@@ -47,7 +47,7 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 9999 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
