@@ -22,10 +22,25 @@
       ../../users/mee.nix
     ];
 
-  # Networking
-  networking.hostName = "muse"; 
+  
+   
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  
+  # Networking
+  networking = {
+    hostName = "muse";
+    useDHCP = true;
+    
+    interfaces.eth0 = {
+      useDHCP = true;
 
+      ipv6.addresses = [{
+        address = "2804:431:cfec:c7c:f3f0:e771:d950:2492";
+        prefixLength = 64;
+      }];
+    };
+  };
+  
   networking.networkmanager.enable = true;
 
 # Enable the OpenSSH daemon.
