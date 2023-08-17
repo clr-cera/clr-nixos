@@ -466,7 +466,6 @@ awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("fcitx5")
 awful.spawn.with_shell("eww close bar")
-awful.spawn.with_shell("python /home/nix/Repos/Ghost/main.py")
 
 --Configurations
 beautiful.useless_gap = 5

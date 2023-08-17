@@ -31,27 +31,19 @@
     hostName = "muse";
 #    useDHCP = true;
     
-    interfaces.eth0 = {
+    interfaces.wlo1 = {
       useDHCP = true;
 
       ipv6.addresses = [{
-        address = "2804:431:cfec:c7c:f3f0:e771:d950:2492";
+        address = "2804:431:cfec:c7c:8cb8:f0e9:8a3a:e4f3";
         prefixLength = 64;
       }];
     };
+
+    firewall.allowedTCPPorts = [ 9999 ];
   };
   
   networking.networkmanager.enable = true;
-
-# Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 9999 ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
 
   # Keyboard stuff
   services.xserver = {

@@ -15,6 +15,7 @@
 	picom
 	rofi
   eww
+  alsa-utils
 	btop
 	ranger
 	betterdiscordctl
