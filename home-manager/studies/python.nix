@@ -38,6 +38,7 @@ let
     (pkgs.python3.withPackages my-python-packages)
     pkgs.arcanPackages.espeak
     pkgs.flac
+    pkgs.python311Packages.cython_3
   ];
 
 }

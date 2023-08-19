@@ -35,12 +35,12 @@
       useDHCP = true;
 
       ipv6.addresses = [{
-        address = "2804:431:cfec:c7c:8cb8:f0e9:8a3a:e4f3";
+        address = "2804:431:cfec:c4c3:146f:7970:9c10:3c1f";
         prefixLength = 64;
       }];
     };
 
-    firewall.allowedTCPPorts = [ 9999 ];
+    firewall.allowedTCPPorts = [ 9998 9999 ];
   };
   
   networking.networkmanager.enable = true;

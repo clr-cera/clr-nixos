@@ -14,6 +14,7 @@
   whatsapp-for-linux
   pavucontrol
   feh
+  vlc
   ];
 
 
