@@ -31,9 +31,10 @@ let
       )
       pyttsx3
       pyaudio
-      
+
       #Networking
       dnspython
+
 
     ];
   in
