@@ -9,8 +9,15 @@
   home.packages = with pkgs;
   [
   gh
-	neovim
+  lazygit
   vscode
   notion-app-enhanced
   ];
+
+  programs.neovim ={
+    enable = true;
+
+    viAlias = true;
+    vimAlias = true;
+  };
 }
