@@ -33,7 +33,12 @@
     
     interfaces.wlo1 = {
       useDHCP = true;
-
+      
+      ipv4.addresses = [{
+        address = "192.168.15.10";
+        prefixLength = 24;
+      }];
+      
       ipv6.addresses = [{
         address = "2804:431:cfec:c4c3:146f:7970:9c10:3c1f";
         prefixLength = 64;
