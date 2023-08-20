@@ -4,6 +4,7 @@
     ./python.nix
     ./c.nix
     ./haskell.nix
+    ./lvim
   ];
 
   home.packages = with pkgs;
