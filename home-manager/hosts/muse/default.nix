@@ -3,19 +3,19 @@
   imports = [
 
     # GUI Customization
-    ./CottonCandy-Awesome
+    ../../CottonCandy-Awesome
     
-    ./desktop
-    ./desktop/torrent.nix
+    ../../desktop
+    ../../desktop/torrent.nix
 
-    ./common
+    ../../common
 
-    ./studies
+    ../../studies
     
-    ./play
+    ../../play
 
     # Provisory
-    ./server
+    ../../server
   ];
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
