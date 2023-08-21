@@ -38,6 +38,12 @@
         extraSpecialArgs = { inherit inputs; }; 
         modules = [ ./home-manager/hosts/muse ];
       };
+      "clr@muse" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; 
+        extraSpecialArgs = { inherit inputs; }; 
+        modules = [ ./home-manager/hosts/muse ];
+      };
+
     };
   };
 }

@@ -8,7 +8,7 @@
   ];
 
   home = {
-    username = "nix";
+    username = "clr";
     homeDirectory = "/home/nix";
   };
 
