@@ -9,7 +9,7 @@
 
   home = {
     username = "clr";
-    homeDirectory = "/home/nix";
+    homeDirectory = "/home/clr";
   };
 
   # Enable home-manager and git
