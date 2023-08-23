@@ -5,6 +5,13 @@ let
       #trivia
       pygame
 
+      #kaggle
+      kaggle
+
+      #jupyter
+      jupyter-core
+      notebook
+
       #data 
       pandas
       numpy
@@ -12,6 +19,8 @@ let
       matplotlib
       seaborn
       plotly
+
+      # GUI
       pysimplegui
 
       #autopoiesis
