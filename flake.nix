@@ -14,10 +14,6 @@
 
     #spicetify!
     spicetify-nix.url = "github:the-argus/spicetify-nix";
-
-    #vscode extensions!
-    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs: {
