@@ -3,7 +3,6 @@
   imports = [
     ./python.nix
     ./c.nix
-    ./haskell.nix
     ./lvim
   ];
 
