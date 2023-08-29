@@ -17,7 +17,6 @@
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs: {
-    # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
       #muse
       muse = nixpkgs.lib.nixosSystem {
@@ -26,7 +25,6 @@
       };    
     };
 
-    # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
       #muse
       "clr@muse" = home-manager.lib.homeManagerConfiguration {
