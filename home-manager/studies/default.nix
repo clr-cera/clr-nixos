@@ -4,7 +4,6 @@
     ./python.nix
     ./c.nix
     ./lvim
-    ./vscode.nix
   ];
 
   home.packages = with pkgs;
@@ -12,6 +11,7 @@
   gh
   lazygit
   notion-app-enhanced
+  vscode
   ];
 
   programs.neovim ={
