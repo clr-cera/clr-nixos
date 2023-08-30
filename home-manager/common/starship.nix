@@ -44,6 +44,11 @@
     show_always = true;
   };
 
+  nix_shell = {
+    impure_msg = "";
+    format = "via [$symbol(\($name\))]($style) ";
+  };
+
   };
 };
 }

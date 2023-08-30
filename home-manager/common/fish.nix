@@ -1,6 +1,11 @@
 { pkgs, inputs, config, ... }:
 
 {
+  home.packages = with pkgs;
+  [
+    any-nix-shell
+  ];
+
   programs.fish = {
 	enable = true;
 
@@ -10,10 +15,13 @@
 		picoms = "picom & disown";
     nixswitch = "cd ~/clr-nixos & sudo nixos-rebuild switch --flake .";
     homeswitch = "cd ~/clr-nixos & home-manager switch --flake . & cd & wait";
+    ns = "nix-shell";
+    nsp = "nix-shell --pure";
 	};
 
 	interactiveShellInit = ''
-		fish_add_path --append ~/.local/bin
+		fish_add_path --append ~/.local/bin &
+    any-nix-shell fish | source
 	'';
 
   };
