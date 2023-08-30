@@ -9,11 +9,14 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    #hardware
+    # Hardware
     hardware.url = "github:nixos/nixos-hardware";
 
-    #spicetify!
+    # Spicetify!
     spicetify-nix.url = "github:the-argus/spicetify-nix";
+    
+    # VSCode
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs: {

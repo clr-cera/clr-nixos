@@ -4,13 +4,13 @@
     ./python.nix
     ./c.nix
     ./lvim
+    ./vscode.nix
   ];
 
   home.packages = with pkgs;
   [
   gh
   lazygit
-  vscode
   notion-app-enhanced
   ];
 
