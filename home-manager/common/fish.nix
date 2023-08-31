@@ -17,6 +17,7 @@
     homeswitch = "cd ~/clr-nixos & home-manager switch --flake . & cd & wait";
     ns = "nix-shell";
     nsp = "nix-shell --pure";
+    nd  = "nix develop -c fish";
 	};
 
 	interactiveShellInit = ''
