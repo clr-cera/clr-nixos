@@ -2,6 +2,6 @@
 {
   home.packages =
   [
-  inputs.ICMChat.packages.ICMChat
+  inputs.ICMChat.packages.default
   ];
 }
