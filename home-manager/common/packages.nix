@@ -12,5 +12,6 @@
 	binutils
   lshw
   acpi
+  nix-index
   ];
 }

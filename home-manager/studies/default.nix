@@ -4,6 +4,7 @@
     ./python.nix
     ./c.nix
     ./lvim
+    ./nvim.nix
   ];
 
   home.packages = with pkgs;
@@ -13,11 +14,4 @@
   notion-app-enhanced
   vscode
   ];
-
-  programs.neovim ={
-    enable = true;
-
-    viAlias = true;
-    vimAlias = true;
-  };
 }
