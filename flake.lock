@@ -10,11 +10,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1693564393,
-        "narHash": "sha256-chKhCUy0dJtxvwlmvjH3TKEJ0YVFPpBTbhSxdl2IvYk=",
+        "lastModified": 1694383315,
+        "narHash": "sha256-2XaBldI1ko9bmr0qkCGiPr7pWxdkb2bJ9eCIOPvuDZ4=",
         "owner": "clr-cera",
         "repo": "ICMChat",
-        "rev": "c5ed882ddf83c1ddc6193544841e7e904f239510",
+        "rev": "7eaa3b7d7d4be05b195f72da5d605873dc58417a",
         "type": "github"
       },
       "original": {
@@ -97,11 +97,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1694338541,
-        "narHash": "sha256-+ZtaNbOwlO1QgYOEvWdhi5wkWjW5Csrboz4xy0WucDg=",
+        "lastModified": 1694375657,
+        "narHash": "sha256-32X8dcty4vPXx+D4yJPQZBo5hJ1NQikALhevGv6elO4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "f9041d12a90e8bc0c90e03be2ebe26a6c6e6fd70",
+        "rev": "f7848d3e5f15ed02e3f286029697e41ee31662d7",
         "type": "github"
       },
       "original": {

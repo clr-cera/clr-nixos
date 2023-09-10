@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 let
     my-python-packages = ps: with ps; [ 

@@ -1,7 +1,7 @@
-{ pkgs, inputs, ... }:
+{ inputs, ... }:
 {
   home.packages =
   [
-  inputs.ICMChat.packages.default
+    inputs.ICMChat.packages.x86_64-linux.default 
   ];
 }
