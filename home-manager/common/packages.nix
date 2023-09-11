@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
   home.packages = with pkgs;
   [
@@ -10,6 +10,7 @@
 	gnumake
 	xclip
 	binutils
+  wget
   lshw
   acpi
   nix-index

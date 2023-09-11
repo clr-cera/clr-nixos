@@ -14,9 +14,6 @@
     
     ../../play
 
-    # Provisory
-    ../../server
-
     # Optional
 #    ../../optional/ICMChat.nix
   ];

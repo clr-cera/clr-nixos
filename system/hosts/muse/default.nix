@@ -1,6 +1,6 @@
 # This is muse!
 
-{ inputs, lib, config, pkgs, ... }:
+{ ... }:
 
 {
   imports =
@@ -29,22 +29,6 @@
   # Networking
   networking = {
     hostName = "muse";
-#    useDHCP = true;
-    
-    interfaces.wlo1 = {
-      useDHCP = true;
-      
-      ipv4.addresses = [{
-        address = "192.168.15.10";
-        prefixLength = 24;
-      }];
-      
-      ipv6.addresses = [{
-        address = "2804:431:cfed:5222:4028:6ac9:fc76:962f";
-        prefixLength = 64;
-      }];
-    };
-
     firewall.allowedTCPPorts = [ 9998 9999 ];
   };
   
