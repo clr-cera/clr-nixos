@@ -1,4 +1,4 @@
-{ inputs, lib, config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   # User
@@ -6,8 +6,8 @@
     isNormalUser = true;
     description = "clr";
     shell = pkgs.fish;
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [ pkgs.home-manager ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    packages = with pkgs; [ home-manager ];
   };
   programs.fish.enable = true;
 
