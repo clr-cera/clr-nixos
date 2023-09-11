@@ -10,7 +10,9 @@
       ../../common
       ../../common/bootManager/grub-efi.nix
 
-      ../../play      
+      ../../play
+
+      ../../studies
 
       ../../desktop
       ../../desktop/GPU/nvidia # GPU
