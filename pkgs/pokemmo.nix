@@ -2,13 +2,16 @@
 , lib
 , fetchzip
 , jdk17
+, makeWrapper
 , makeDesktopItem
+, copyDesktopItems
 , imagemagick
+, ed
 }:
 
 stdenv.mkDerivation rec {
   pname = "pokemmo";
-  version = "0.1.0";
+  version = "24499";
 
   src = fetchzip {
     url = "https://dl.pokemmo.com/PokeMMO-Client.zip";
@@ -19,40 +22,44 @@ stdenv.mkDerivation rec {
   buildInputs = [
     jdk17
     imagemagick
+    makeWrapper
+    ed
+    copyDesktopItems
   ];
 
   desktopItems = [
     (makeDesktopItem {
-      name = "PokeMMO";
+      name = pname;
       desktopName = "PokeMMO";
-      exec = "PokeMMO";
+      exec = pname;
       comment = meta.description;
-      icon = "pokemmo";
+      icon = pname;
       categories = [ "Game" ];
     })
   ];
 
-
-  configurePhase = ''
-
-  '';
-
   buildPhase = ''
-
+  touch executionScript.sh
+  chmod +x executionScript.sh
+  echo "cd $out/share/${pname}
+  exec ./PokeMMO.sh" >> executionScript.sh
   '';
 
   installPhase = ''
     mkdir -p $out/{bin,share/${pname}}
     cp -r . "$out/share/${pname}"
-    ln -s $out/share/${pname}/PokeMMO.sh $out/bin/PokeMMO.sh
+    ln -s $out/share/${pname}/executionScript.sh $out/bin/pokemmo 
+   
+    #Copy the desktop item into $out
+    copyDesktopItems
 
     # Generate and install icon files
-    for size in 16 32 48 64 72 96 128; do
-      mkdir -p $out/share/icons/hicolor/"$size"x"$size"/apps
-      convert $out/share/pokemmo/data/icons/128x128.png -sample "$size"x"$size" \
-        -gravity south -extent "$size"x"$size" \
-        $out/share/icons/hicolor/"$size"x"$size"/apps/pokemmo.png
-    done
+    mkdir -p $out/share/icons/hicolor/128x128/apps
+    cp $out/share/pokemmo/data/icons/128x128.png $out/share/icons/hicolor/128x128/apps/${pname}.png 
+  '';
+
+    postFixup = ''
+    wrapProgram $out/bin/pokemmo --prefix PATH : ${lib.makeBinPath [ jdk17 ]}
   '';
 
   meta = with lib; {
