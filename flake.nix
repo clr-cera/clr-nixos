@@ -28,8 +28,8 @@
   };
 
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
-    let
+  outputs = { self, nixpkgs, home-manager, clrpkgs, ... }@inputs:
+     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
         "aarch64-linux"
@@ -40,9 +40,10 @@
       ];
     in
      {
-
-      packages = forAllSystems (system:
-        let pkgs = nixpkgs.legacyPackages.${system};
+      packages = forAllSystems (sys:
+        let 
+          pkgs = nixpkgs.legacyPackages.${sys};
+          
         in import ./pkgs { inherit pkgs; }
       );
 
@@ -54,11 +55,14 @@
         };    
       };
 
-      homeConfigurations = {
+      homeConfigurations = 
+      let clr = clrpkgs.packages.x86_64-linux;
+      in
+      {
         #muse
         "clr@muse" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux; 
-          extraSpecialArgs = { inherit inputs outputs; }; 
+          extraSpecialArgs = { inherit inputs outputs clr; }; 
           modules = [ ./home-manager/hosts/muse ];
         };
       };
