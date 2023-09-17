@@ -44,6 +44,8 @@ let
       #Networking
       dnspython
 
+      #TurtleSnake
+      keyboard
 
     ];
   in

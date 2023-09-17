@@ -5,6 +5,10 @@
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    # Clrpkgs
+    clrpkgs.url = "github:clr-cera/clrpkgs";
+    clrpkgs.inputs.nixpkgs.follows = "nixpkgs";
+
     # Flake-utils
     flake-utils.url = "github:numtide/flake-utils";
 
@@ -18,16 +22,6 @@
     # Spicetify!
     spicetify-nix.url = "github:the-argus/spicetify-nix";
     spicetify-nix.inputs = {
-      nixpkgs.follows = "nixpkgs";
-      flake-utils.follows = "flake-utils";
-    };
-    
-    # VSCode
-    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-
-    # ICMChat!!
-    ICMChat.url = "github:clr-cera/ICMChat";
-    ICMChat.inputs = {
       nixpkgs.follows = "nixpkgs";
       flake-utils.follows = "flake-utils";
     };

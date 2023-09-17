@@ -1,4 +1,4 @@
-{ pkgs, inputs, config, lib, ... }:
+{ pkgs, ... }:
 {
 
 
@@ -6,5 +6,6 @@
   [
 	gcc
   clang-tools
+  gdb
   ];
 }

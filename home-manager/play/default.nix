@@ -1,4 +1,4 @@
-{ pkgs, outputs, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
     ./steam.nix
@@ -9,6 +9,6 @@
   home.packages = with pkgs;
   [
   osu-lazer-bin
-  outputs.packages.x86_64-linux.pokemmo
+  inputs.clrpkgs.packages.x86_64-linux.pokemmo-installer
   ];
 }
