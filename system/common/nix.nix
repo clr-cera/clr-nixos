@@ -1,13 +1,21 @@
-{ inputs, lib, config, pkgs, ... }:
+{ inputs, lib, config, outputs, ... }:
 
 {
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-  
-  # Allow insecure packages
-  nixpkgs.config.permittedInsecurePackages = [
-  	"openssl-1.1.1u"
-  ];
+  nixpkgs = {
+    config = {
+      permittedInsecurePackages = [
+  	    "openssl-1.1.1u"
+      ];
+      allowUnfree = true;
+    };
+
+    overlays = [
+      outputs.overlays.additions
+      outputs.overlays.modifications
+
+      inputs.clrpkgs.overlays.modifications
+    ];
+  };
 
   # Settings
   nix = {
