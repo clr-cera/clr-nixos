@@ -16,7 +16,7 @@
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
-      outputs.overlays.unstable-packages
+
       inputs.clrpkgs.overlays.modifications
     ];
   };
