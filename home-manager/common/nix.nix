@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ inputs, outputs, ... }:
 
 {
   nixpkgs = {
@@ -12,6 +12,12 @@
           "openssl-1.1.1u"
           "electron-11.5.0"
         ];
-	    };
+	  };
+    overlays = [
+      outputs.overlays.additions
+      outputs.overlays.modifications
+      outputs.overlays.unstable-packages
+      inputs.clrpkgs.overlays.modifications
+    ];
   };
 }

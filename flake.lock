@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1694972766,
-        "narHash": "sha256-9omjMFqQUVWP884SYj3bATcdJ+CJWn0CfZGpk2pYFFA=",
+        "lastModified": 1695073114,
+        "narHash": "sha256-3IdDBb1+CS4NeRBUSRSbZfdgErbWqqrX9n6q/LVzV1U=",
         "owner": "clr-cera",
         "repo": "clrpkgs",
-        "rev": "2246b235bad97d6280bf59e9c13f4840e182230a",
+        "rev": "c623c4bbfeae5639f0696bc5935047298fdaaf99",
         "type": "github"
       },
       "original": {

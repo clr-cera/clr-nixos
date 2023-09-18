@@ -47,6 +47,8 @@
         in import ./pkgs { inherit pkgs; }
       );
 
+      overlays = import ./overlays {inherit inputs;};
+
       nixosConfigurations = {
         #muse
         muse = nixpkgs.lib.nixosSystem {

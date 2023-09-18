@@ -14,5 +14,6 @@
   lshw
   acpi
   nix-index
+  cowsay
   ];
 }
