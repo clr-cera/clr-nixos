@@ -1,10 +1,10 @@
-{ ... }: {
+{ rices, ... }: {
 
   imports = [
 
     # GUI Customization
-    ../../CottonCandy-Awesome
-    
+    rices.cottonCandy
+
     ../../desktop
     ../../desktop/torrent.nix
 
@@ -13,9 +13,6 @@
     ../../studies
     
     ../../play
-
-    # Optional
-#    ../../optional/ICMChat.nix
   ];
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion

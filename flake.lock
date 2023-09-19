@@ -2,16 +2,23 @@
   "nodes": {
     "clrpkgs": {
       "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "home-manager": [
+          "home-manager"
+        ],
         "nixpkgs": [
           "nixpkgs"
-        ]
+        ],
+        "spicetify-nix": "spicetify-nix"
       },
       "locked": {
-        "lastModified": 1695074412,
-        "narHash": "sha256-g3JrMR4ncyV4PLa6nkam6SKhONaq/D/6jkb4J/5xdUw=",
+        "lastModified": 1695163271,
+        "narHash": "sha256-Zkxfw418QnWP9J7StwOe3tEBjfZuEdNyn6mTbCgATzk=",
         "owner": "clr-cera",
         "repo": "clrpkgs",
-        "rev": "8a9617073a13ec1a389e576a96aa18b1159ff7ab",
+        "rev": "7994c253e8800cd2eea6f657793e1b175cf8ca70",
         "type": "github"
       },
       "original": {
@@ -96,10 +103,35 @@
         "hardware": "hardware",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "spicetify-nix": "spicetify-nix"
+        "spicetify-nix": "spicetify-nix_2"
       }
     },
     "spicetify-nix": {
+      "inputs": {
+        "flake-utils": [
+          "clrpkgs",
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "clrpkgs",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1693075322,
+        "narHash": "sha256-O/qmWiE23pzYMSKNhA74jfY1D5TyiJrHx35PYkRx9Gs=",
+        "owner": "the-argus",
+        "repo": "spicetify-nix",
+        "rev": "78495ade242ad155942c2e33e3930e4a05963f13",
+        "type": "github"
+      },
+      "original": {
+        "owner": "the-argus",
+        "repo": "spicetify-nix",
+        "type": "github"
+      }
+    },
+    "spicetify-nix_2": {
       "inputs": {
         "flake-utils": [
           "flake-utils"

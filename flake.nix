@@ -7,7 +7,11 @@
 
     # Clrpkgs
     clrpkgs.url = "github:clr-cera/clrpkgs";
-    clrpkgs.inputs.nixpkgs.follows = "nixpkgs";
+    clrpkgs.inputs = {
+      nixpkgs.follows = "nixpkgs";
+      flake-utils.follows = "flake-utils";
+      home-manager.follows = "home-manager";
+    };
 
     # Flake-utils
     flake-utils.url = "github:numtide/flake-utils";
@@ -59,12 +63,13 @@
 
       homeConfigurations = 
       let clr = clrpkgs.packages.x86_64-linux;
+          rices = clrpkgs.rices;
       in
       {
         #muse
         "clr@muse" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux; 
-          extraSpecialArgs = { inherit inputs outputs clr; }; 
+          extraSpecialArgs = { inherit inputs outputs clr rices; }; 
           modules = [ ./home-manager/hosts/muse ];
         };
       };
