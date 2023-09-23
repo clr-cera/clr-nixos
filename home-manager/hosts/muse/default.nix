@@ -3,7 +3,7 @@
   imports = [
 
     # GUI Customization
-    rices.cottonCandy
+    rices.nixCandy
 
     ../../desktop
     ../../desktop/torrent.nix

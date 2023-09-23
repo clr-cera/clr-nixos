@@ -42,6 +42,7 @@
         "aarch64-darwin"
         "x86_64-darwin"
       ];
+      rices = clrpkgs.rices;
     in
      {
       packages = forAllSystems (sys:
@@ -63,7 +64,6 @@
 
       homeConfigurations = 
       let clr = clrpkgs.packages.x86_64-linux;
-          rices = clrpkgs.rices;
       in
       {
         #muse
