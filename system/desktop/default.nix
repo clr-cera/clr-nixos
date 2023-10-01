@@ -2,6 +2,7 @@
   imports = [
     ./bluetooth.nix
     ./sound.nix
+    ./services.nix
   ];
 
   xdg.portal = {
