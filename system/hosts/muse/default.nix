@@ -26,7 +26,6 @@
   # Networking
   networking = {
     hostName = "muse";
-    firewall.allowedTCPPorts = [9998 9999];
   };
 
   networking.networkmanager.enable = true;

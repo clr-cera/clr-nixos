@@ -1,7 +1,7 @@
 {rices, ...}: {
   imports = [
     # GUI Customization
-    rices.nixCandy
+    rices.nixCandyAwesome
 
     ../../desktop
     ../../desktop/torrent.nix
