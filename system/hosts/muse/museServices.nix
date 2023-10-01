@@ -1,8 +1,5 @@
 # This is muse!
 { ... }: {
-  imports = [
-
-  ];
   
   systemd.user.services.monitor = {
     description = "This script sets up muse display";

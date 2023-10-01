@@ -2,7 +2,7 @@
 {...}: {
   imports = [
     # Include the results of the hardware scan.
-    ./muse-hardware-configuration.nix
+    ./museHardwareConfiguration.nix
 
     # Services
     ./museServices.nix
