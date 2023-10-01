@@ -1,7 +1,5 @@
-{ rices, ... }: {
-
+{rices, ...}: {
   imports = [
-
     # GUI Customization
     rices.nixCandy
 
@@ -11,7 +9,7 @@
     ../../common
 
     ../../studies
-    
+
     ../../play
   ];
 

@@ -29,49 +29,70 @@
       nixpkgs.follows = "nixpkgs";
       flake-utils.follows = "flake-utils";
     };
+
+    # Alejandra
+    alejandra.url = "github:kamadorueda/alejandra/3.0.0";
+    alejandra.inputs.nixpkgs.follows = "nixpkgs";
   };
 
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    clrpkgs,
+    ...
+  } @ inputs: let
+    inherit (self) outputs;
+    forAllSystems = nixpkgs.lib.genAttrs [
+      "aarch64-linux"
+      "i686-linux"
+      "x86_64-linux"
+      "aarch64-darwin"
+      "x86_64-darwin"
+    ];
 
-  outputs = { self, nixpkgs, home-manager, clrpkgs, ... }@inputs:
-     let
-      inherit (self) outputs;
-      forAllSystems = nixpkgs.lib.genAttrs [
-        "aarch64-linux"
-        "i686-linux"
-        "x86_64-linux"
-        "aarch64-darwin"
-        "x86_64-darwin"
-      ];
-      rices = clrpkgs.rices;
-    in
-     {
-      packages = forAllSystems (sys:
-        let 
-          pkgs = nixpkgs.legacyPackages.${sys};
-          
-        in import ./pkgs { inherit pkgs; }
-      );
+    systems = {
+      aarchLinux = "aarch64-linux";
+      i686 = "i686-linux";
+      linux64 = "x86_64-linux";
+      aarchDarwin = "aarch64-darwin";
+      darwin64 = "x86_64-darwin";
+    };
 
-      overlays = import ./overlays {inherit inputs;};
-
-      nixosConfigurations = {
-        #muse
-        muse = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs;}; 
-          modules = [ ./system/hosts/muse ];
-        };    
-      };
-
-      homeConfigurations = 
-      let clr = clrpkgs.packages.x86_64-linux;
+    rices = clrpkgs.rices;
+  in {
+    packages = forAllSystems (
+      sys: let
+        pkgs = nixpkgs.legacyPackages.${sys};
       in
-      {
-        #muse
-        "clr@muse" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux; 
-          extraSpecialArgs = { inherit inputs outputs clr rices; }; 
-          modules = [ ./home-manager/hosts/muse ];
-        };
+        import ./pkgs {inherit pkgs;}
+    );
+
+    overlays = import ./overlays {inherit inputs;};
+
+    nixosConfigurations = {
+      #muse
+      muse = nixpkgs.lib.nixosSystem {
+        specialArgs = let
+          system = systems.linux64;
+          clr = clrpkgs.packages.${system};
+        in {inherit inputs outputs system clr;};
+        modules = [./system/hosts/muse];
       };
     };
+
+    homeConfigurations = {
+      #muse
+      "clr@muse" =
+        home-manager.lib.homeManagerConfiguration
+        {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = let
+            system = systems.linux64;
+            clr = clrpkgs.packages.${system};
+          in {inherit inputs outputs system clr rices;};
+          modules = [./home-manager/hosts/muse];
+        };
+    };
+  };
 }

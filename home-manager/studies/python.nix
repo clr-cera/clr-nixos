@@ -1,7 +1,6 @@
-{ pkgs, ... }:
-
-let
-    my-python-packages = ps: with ps; [ 
+{pkgs, ...}: let
+  my-python-packages = ps:
+    with ps; [
       #trivia
       pygame
 
@@ -12,7 +11,7 @@ let
       jupyter-core
       notebook
 
-      #data 
+      #data
       pandas
       numpy
       scikit-learn
@@ -22,9 +21,11 @@ let
 
       # GUI
       pysimplegui
+      keyboard
+      pynput
 
       #autopoiesis
-      (#SpeechRecognition
+      ( #SpeechRecognition
         buildPythonPackage rec {
           pname = "SpeechRecognition";
           version = "3.10.0";
@@ -46,15 +47,12 @@ let
 
       #TurtleSnake
       keyboard
-
     ];
-  in
-{
+in {
   home.packages = [
     (pkgs.python3.withPackages my-python-packages)
     pkgs.arcanPackages.espeak
     pkgs.flac
     pkgs.python311Packages.cython_3
   ];
-
 }

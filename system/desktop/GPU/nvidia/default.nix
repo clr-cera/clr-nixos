@@ -1,8 +1,13 @@
-{ inputs, lib, config, pkgs, ... }:
-
+{
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 #Taken from https://nixos.wiki/wiki/Nvidia
 {
- # Make sure opengl is enabled
+  # Make sure opengl is enabled
   hardware.opengl = {
     enable = true;
     driSupport = true;
@@ -19,7 +24,6 @@
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
-
     # Modesetting is needed for most wayland compositors
     modesetting.enable = true;
 

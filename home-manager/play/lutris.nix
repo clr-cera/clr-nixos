@@ -1,6 +1,8 @@
-{ pkgs, inputs, ... }:
-
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   home.packages = with pkgs; [
     lutris
     wineWowPackages.full

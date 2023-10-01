@@ -1,6 +1,10 @@
-{ inputs, lib, config, pkgs, ... }:
-
 {
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
 

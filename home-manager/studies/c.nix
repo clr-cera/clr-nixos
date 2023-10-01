@@ -1,11 +1,7 @@
-{ pkgs, ... }:
-{
-
-
-  home.packages = with pkgs;
-  [
-	gcc
-  clang-tools
-  gdb
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    gcc
+    clang-tools
+    gdb
   ];
 }

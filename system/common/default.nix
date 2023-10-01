@@ -1,10 +1,12 @@
-{ inputs, lib, config, pkgs, ... }:
-
 {
-  imports =
-    [ 
-      ./language.nix
-      ./nix.nix
-    ];
-
+  inputs,
+  system,
+  ...
+}: {
+  imports = [
+    ./language.nix
+    ./nix.nix
+    ./kernel.nix
+  ];
+  environment.systemPackages = [inputs.alejandra.defaultPackage.${system}];
 }
