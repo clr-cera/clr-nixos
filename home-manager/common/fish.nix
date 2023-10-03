@@ -1,7 +1,5 @@
 {
   pkgs,
-  inputs,
-  config,
   ...
 }: {
   home.packages = with pkgs; [
@@ -20,6 +18,7 @@
       ns = "nix-shell";
       nsp = "nix-shell --pure";
       nd = "nix develop -c fish";
+      nb = "nix build .";
     };
 
     interactiveShellInit = ''
