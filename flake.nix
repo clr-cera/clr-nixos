@@ -55,7 +55,7 @@
       darwin64 = "x86_64-darwin";
     };
 
-    rices = clrpkgs.rices;
+    risotti = clrpkgs.risotti;
   in {
     packages = forAllSystems (
       sys: let
@@ -86,7 +86,7 @@
           extraSpecialArgs = let
             system = systems.linux64;
             clr = clrpkgs.packages.${system};
-          in {inherit inputs outputs system clr rices;};
+          in {inherit inputs outputs system clr risotti;};
           modules = [./home-manager/hosts/muse];
         };
     };

@@ -23,7 +23,7 @@
     # Users
     ../../users/mee.nix
   ];
-  
+
   networking.hostName = "muse";
 
   # Keyboard stuff

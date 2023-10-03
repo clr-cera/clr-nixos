@@ -12,5 +12,6 @@
     osu-lazer-bin
     itch
     clr.pokemmo-installer
+    heroic
   ];
 }
