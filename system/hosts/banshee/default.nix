@@ -5,7 +5,6 @@
     ./bansheeHardwareConfiguration.nix
 
     ../../common
-    ../../common/bootManager/grub-efi.nix
 
     ../../studies
 
