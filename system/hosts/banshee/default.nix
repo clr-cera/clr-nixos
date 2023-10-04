@@ -15,7 +15,10 @@
 
   networking.hostName = "banshee";
 
-  # console.keyMap = "br-abnt2";
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 9999 ];
+  };
 
   system.stateVersion = "23.11";
 }
