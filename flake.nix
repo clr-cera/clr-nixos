@@ -75,6 +75,16 @@
         in {inherit inputs outputs system clr;};
         modules = [./system/hosts/muse];
       };
+      
+      #banshee
+      banshee = nixpkgs.lib.nixosSystem {
+        specialArgs = let
+          system = systems.linux64;
+          clr = clrpkgs.packages.${system};
+        in {inherit inputs outputs system clr;};
+        modules = [./system/hosts/banshee];
+      };
+
     };
 
     homeConfigurations = {
@@ -88,6 +98,18 @@
             clr = clrpkgs.packages.${system};
           in {inherit inputs outputs system clr risotti;};
           modules = [./home-manager/hosts/muse];
+        };
+
+      #banshee
+      "clr@banshee" =
+        home-manager.lib.homeManagerConfiguration
+        {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = let
+            system = systems.linux64;
+            clr = clrpkgs.packages.${system};
+          in {inherit inputs outputs system clr ;};
+          modules = [./home-manager/hosts/banshee];
         };
     };
   };
