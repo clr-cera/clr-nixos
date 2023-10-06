@@ -14,11 +14,11 @@
         "spicetify-nix": "spicetify-nix"
       },
       "locked": {
-        "lastModified": 1696265880,
-        "narHash": "sha256-fNwLIfNSz7oGxl5a/qMTfPXL5oM9QHEX6YuJyXZzpIQ=",
+        "lastModified": 1696560074,
+        "narHash": "sha256-1rz9ttQG8k8iCrpse3+vGsOGG5wCffxayTwh19u6Bb4=",
         "owner": "clr-cera",
         "repo": "clrpkgs",
-        "rev": "278c4693c982d5a4306a2e355e095764e99c3763",
+        "rev": "c13ed3b2a845427c92c2a1fb3a17a8f10022dc7a",
         "type": "github"
       },
       "original": {
