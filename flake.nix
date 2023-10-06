@@ -75,7 +75,7 @@
         in {inherit inputs outputs system clr;};
         modules = [./system/hosts/muse];
       };
-      
+
       #banshee
       banshee = nixpkgs.lib.nixosSystem {
         specialArgs = let
@@ -84,7 +84,6 @@
         in {inherit inputs outputs system clr;};
         modules = [./system/hosts/banshee];
       };
-
     };
 
     homeConfigurations = {
@@ -108,7 +107,7 @@
           extraSpecialArgs = let
             system = systems.linux64;
             clr = clrpkgs.packages.${system};
-          in {inherit inputs outputs system clr ;};
+          in {inherit inputs outputs system clr;};
           modules = [./home-manager/hosts/banshee];
         };
     };
