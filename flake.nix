@@ -29,6 +29,9 @@
       nixpkgs.follows = "nixpkgs";
       flake-utils.follows = "flake-utils";
     };
+
+    # Mail stuff
+    simple-nixos-mailserver.url = "gitlab:simple-nixos-mailserver/nixos-mailserver/nixos-20.09";
   };
 
   outputs = {
