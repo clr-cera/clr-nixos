@@ -10,13 +10,16 @@
 
     # Users
     ../../users/mee.nix
+
+    # Mail
+    ../../server/mail.nix
   ];
 
   networking.hostName = "banshee";
 
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [9999];
+    allowedTCPPorts = [9999 80];
   };
 
   system.stateVersion = "23.11";
