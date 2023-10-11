@@ -10,6 +10,9 @@
 
     # Users
     ../../users/mee.nix
+
+    # Email
+    ../../server/mail.nix
   ];
 
   networking.hostName = "banshee";
