@@ -11,7 +11,7 @@
     
     loginAccounts = {
       "clr@clrcera.ddns.net" = {
-        hashedPasswordFile = "/a/file/containing/a/hashed/password";
+        hashedPasswordFile = "/mail/clrPassword";
       };
     };
     certificateScheme = "acme-nginx";
