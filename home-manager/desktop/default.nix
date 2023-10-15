@@ -12,6 +12,7 @@
     pavucontrol
     feh
     vlc
+    audacious
   ];
 
   services.flameshot.enable = true;

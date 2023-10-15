@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   imports = [
-    ./python.nix
     ./c.nix
     ./lvim
     ./nvim.nix
