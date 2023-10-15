@@ -16,7 +16,7 @@
 
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [9999];
+    allowedTCPPorts = [25 465 587 110 995 143 993 9999];
   };
 
   system.stateVersion = "23.11";

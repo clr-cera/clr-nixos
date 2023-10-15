@@ -10,6 +10,6 @@
     lazygit
     notion-app-enhanced
     vscode
-    heroku
+    conda
   ];
 }
