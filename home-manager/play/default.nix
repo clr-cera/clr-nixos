@@ -6,6 +6,7 @@
   imports = [
     ./steam.nix
     ./lutris.nix
+    ./mine.nix
   ];
 
   home.packages = with pkgs; [
