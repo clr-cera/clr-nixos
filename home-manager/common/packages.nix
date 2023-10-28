@@ -13,5 +13,6 @@
     acpi
     nix-index
     cowsay
+    comma
   ];
 }
