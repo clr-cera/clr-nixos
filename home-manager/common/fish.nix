@@ -3,6 +3,11 @@
     any-nix-shell
   ];
 
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
+
   programs.fish = {
     enable = true;
 
@@ -21,7 +26,8 @@
 
     interactiveShellInit = ''
       fish_add_path --append ~/.local/bin &
-        any-nix-shell fish | source
+      any-nix-shell fish | source
+      direnv hook fish | source
     '';
   };
 }
