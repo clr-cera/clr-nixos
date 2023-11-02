@@ -25,6 +25,7 @@
     };
 
     interactiveShellInit = ''
+      export DIRENV_LOG_FORMAT=
       fish_add_path --append ~/.local/bin &
       any-nix-shell fish | source
       direnv hook fish | source
