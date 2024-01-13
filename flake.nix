@@ -97,7 +97,7 @@
 
     homeConfigurations = {
       #muse
-      "clr@muse" =
+      "clr@terpsichore" =
         home-manager.lib.homeManagerConfiguration
         {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
@@ -105,7 +105,7 @@
             system = systems.linux64;
             clr = clrpkgs.packages.${system};
           in {inherit inputs outputs system clr risotti;};
-          modules = [./home-manager/hosts/muse];
+          modules = [./home-manager/hosts/terpsichore];
         };
 
       #banshee

@@ -2,7 +2,7 @@
 {...}: {
   imports = [
     # Include the results of the hardware scan.
-    ./museHardwareConfiguration.nix
+    ./terpsichoreHardwareConfiguration.nix
 
     # Services
 
@@ -22,7 +22,7 @@
     ../../users/mee.nix
   ];
 
-  networking.hostName = "muse";
+  networking.hostName = "terpsichore";
 
   # Keyboard stuff
   services.xserver = {
