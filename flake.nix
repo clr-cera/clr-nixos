@@ -76,13 +76,13 @@
     overlays = import ./overlays {inherit inputs;};
 
     nixosConfigurations = {
-      #muse
-      muse = nixpkgs.lib.nixosSystem {
+      #terpsichore
+      terpsichore = nixpkgs.lib.nixosSystem {
         specialArgs = let
           system = systems.linux64;
           clr = clrpkgs.packages.${system};
         in {inherit inputs outputs system clr;};
-        modules = [./system/hosts/muse];
+        modules = [./system/hosts/terpsichore];
       };
 
       #banshee
