@@ -26,13 +26,6 @@
 
           #          theme.name = "TokyoNight";
 
-          extraConfig = ''
-            show-power=false
-            show-a11y=false
-            show-keyboard=false
-            show-clock=false
-            background="/home/nix/.config/Wallpapers/lightdmWallpaper.jpg"
-          '';
         };
       };
     };

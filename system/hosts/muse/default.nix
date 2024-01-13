@@ -5,7 +5,6 @@
     ./museHardwareConfiguration.nix
 
     # Services
-    ./museServices.nix
 
     ../../common
     ../../common/bootManager/grub-efi.nix
@@ -16,7 +15,6 @@
 
     ../../desktop
     ../../desktop/GPU/nvidia # GPU
-    ../../desktop/GPU/nvidia/nvidiaScalePatch.nix
     ../../desktop/GUI/windowManager/awesome.nix # Graphical Interface
     ../../desktop/GUI/displayManager/lightdm.nix
 
