@@ -16,7 +16,8 @@
     ../../desktop
     ../../desktop/GPU/nvidia # GPU
     ../../desktop/GUI/windowManager/awesome.nix # Graphical Interface
-    ../../desktop/GUI/displayManager/lightdm.nix
+    ../../desktop/GUI/windowManager/hyprland.nix
+    ../../desktop/GUI/displayManager/gdm.nix
 
     # Users
     ../../users/mee.nix

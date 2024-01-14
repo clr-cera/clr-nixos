@@ -30,6 +30,11 @@
       flake-utils.follows = "flake-utils";
     };
 
+    hyprsome.url = "github:sopa0/hyprsome";
+    hyprsome.inputs = {
+      nixpkgs.follows = "nixpkgs";
+      flake-utils.follows = "flake-utils";
+    };
     # Mail stuff
     simple-nixos-mailserver.url = "gitlab:simple-nixos-mailserver/nixos-mailserver"; 
     simple-nixos-mailserver.inputs = {
