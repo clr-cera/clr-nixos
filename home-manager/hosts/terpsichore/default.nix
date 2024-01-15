@@ -19,6 +19,7 @@
     inputs.hyprsome.packages.${system}.default
     mako
     swww
+    waybar
   ];
 
 

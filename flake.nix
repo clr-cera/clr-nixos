@@ -4,7 +4,8 @@
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
+    oldnixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
+    
     # Clrpkgs
     clrpkgs.url = "github:clr-cera/clrpkgs";
     clrpkgs.inputs = {
@@ -48,6 +49,7 @@
   outputs = {
     self,
     nixpkgs,
+    oldnixpkgs,
     home-manager,
     clrpkgs,
     ...

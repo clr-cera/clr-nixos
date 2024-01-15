@@ -30,11 +30,11 @@
         "spicetify-nix": "spicetify-nix"
       },
       "locked": {
-        "lastModified": 1705203182,
-        "narHash": "sha256-fMIehdLAGplIQHC9ZZfR6/342ZWDOyZH4+OYcw8gIzk=",
+        "lastModified": 1705263606,
+        "narHash": "sha256-SwVf97pWlhc4nP0FpkK575b+ZWxzYjEXkObgZq1qlXI=",
         "owner": "clr-cera",
         "repo": "clrpkgs",
-        "rev": "07c0c3f0abe81eda80247ccc9e8627c4db470e5d",
+        "rev": "721b8f4399dcae9ce6bd73860f3d3a69cb6a7871",
         "type": "github"
       },
       "original": {
@@ -210,6 +210,22 @@
         "type": "github"
       }
     },
+    "oldnixpkgs": {
+      "locked": {
+        "lastModified": 1704290814,
+        "narHash": "sha256-LWvKHp7kGxk/GEtlrGYV68qIvPHkU9iToomNFGagixU=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "70bdadeb94ffc8806c0570eb5c2695ad29f0e421",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-23.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "clrpkgs": "clrpkgs",
@@ -218,6 +234,7 @@
         "home-manager": "home-manager",
         "hyprsome": "hyprsome",
         "nixpkgs": "nixpkgs",
+        "oldnixpkgs": "oldnixpkgs",
         "simple-nixos-mailserver": "simple-nixos-mailserver",
         "spicetify-nix": "spicetify-nix_2"
       }
