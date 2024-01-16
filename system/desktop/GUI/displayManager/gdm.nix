@@ -22,7 +22,7 @@
           gnome-shell = superg.gnome-shell.overrideAttrs (old: {
             patches = (old.patches or []) ++ [
               (let
-                bg = ./wallpaper/display-manager-wallpaper.png;
+                bg = ./wallpaper/display-manager-wallpaper.jpg;
               in pkgs.writeText "bg.patch" ''
                 --- a/data/theme/gnome-shell-sass/widgets/_login-lock.scss
                 +++ b/data/theme/gnome-shell-sass/widgets/_login-lock.scss
