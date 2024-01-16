@@ -3,6 +3,7 @@
   lib,
   config,
   outputs,
+  pkgs,
   ...
 }: {
   nixpkgs = {
@@ -16,8 +17,9 @@
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
-
+      
       inputs.clrpkgs.overlays.modifications
+      
     ];
   };
 
