@@ -3,6 +3,7 @@
     ./bluetooth.nix
     ./sound.nix
     ./services.nix
+    ./virtualbox.nix
   ];
 
   xdg.portal = {
