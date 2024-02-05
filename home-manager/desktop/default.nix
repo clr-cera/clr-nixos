@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
+  ./environment.nix
   ];
 
   home.packages = with pkgs; [

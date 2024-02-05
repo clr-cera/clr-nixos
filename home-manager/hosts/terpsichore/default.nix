@@ -5,6 +5,8 @@
 
     ../../desktop
     ../../desktop/torrent.nix
+    ../../desktop/hyprland.nix
+    ../../desktop/awesome.nix
 
     ../../common
 
@@ -12,18 +14,6 @@
 
     ../../play
   ];
-
-  # hyprland tinkering
-  programs.wofi.enable = true;
-  home.packages = with pkgs; [
-    inputs.hyprsome.packages.${system}.default
-    mako
-    swww
-    waybar
-    waypaper
-    swaylock
-  ];
-
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "23.05";
