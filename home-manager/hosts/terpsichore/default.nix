@@ -20,6 +20,8 @@
     mako
     swww
     waybar
+    waypaper
+    swaylock
   ];
 
 

@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./c.nix
+    ./rust.nix
     ./lvim
     ./nvim.nix
   ];
