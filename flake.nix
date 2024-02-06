@@ -1,6 +1,7 @@
 {
   description = "My system configuration!";
 
+
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -103,7 +104,7 @@
     };
 
     homeConfigurations = {
-      #muse
+      #terpsichore
       "clr@terpsichore" =
         home-manager.lib.homeManagerConfiguration
         {

@@ -3,7 +3,6 @@
     any-nix-shell
   ];
 
-
   programs.zellij = {
     enable = true;
   };

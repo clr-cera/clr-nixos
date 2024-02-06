@@ -1,10 +1,8 @@
 {risotti, inputs, system, pkgs, ...}: {
   imports = [
     # GUI Customization
-    risotti.nixCandy
-
     ../../desktop
-    ../../desktop/torrent.nix
+    ../../desktop/softwares/torrent.nix
     ../../desktop/hyprland.nix
     ../../desktop/awesome.nix
 

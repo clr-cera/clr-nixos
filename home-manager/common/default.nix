@@ -6,6 +6,7 @@
     ./nix.nix
   ];
 
+
   home = {
     username = "clr";
     homeDirectory = "/home/clr";

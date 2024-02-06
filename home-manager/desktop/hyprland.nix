@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, inputs, ...}: {
   
   wayland.windowManager.hyprland = {
     enable = true;

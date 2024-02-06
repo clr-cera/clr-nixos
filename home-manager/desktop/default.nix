@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
   ./environment.nix
+  ./softwares/spicetify.nix
   ];
 
   home.packages = with pkgs; [
