@@ -1,8 +1,5 @@
 {pkgs, inputs, ...}: {
   
-  wayland.windowManager.hyprland = {
-    enable = true;
-  };
 
   programs.wofi.enable = true;
   
