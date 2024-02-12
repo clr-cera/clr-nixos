@@ -5,6 +5,7 @@
     ./kernel.nix
     ./network.nix
     ./tailscale.nix
+    ./binary.nix
   ];
   environment.systemPackages = with pkgs; [alejandra];
   
