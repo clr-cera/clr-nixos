@@ -9,6 +9,7 @@
   boot.loader = {
     efi.canTouchEfiVariables = true;
     efi.efiSysMountPoint = "/boot";
+    timeout = 120;
 
     grub = {
       devices = ["nodev"];

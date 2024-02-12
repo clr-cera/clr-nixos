@@ -17,5 +17,6 @@
   environment.systemPackages = with pkgs; [
     acpilight
     brightnessctl
+    wluma
   ];
 }
