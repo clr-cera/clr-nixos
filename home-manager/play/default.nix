@@ -7,6 +7,7 @@
     ./steam.nix
     ./lutris.nix
     ./mine.nix
+    ./genshin.nix
   ];
 
   home.packages = with pkgs; [
