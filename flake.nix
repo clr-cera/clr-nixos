@@ -46,6 +46,10 @@
       nixpkgs-23_05.follows = "nixpkgs";
       utils.follows = "flake-utils"; 
     };
+
+    # Genshin!
+    aagl.url = "github:ezKEa/aagl-gtk-on-nix";
+    aagl.inputs.nixpkgs.follows = "nixpkgs"; 
   };
 
   outputs = {

@@ -2,10 +2,12 @@
   imports = [
   ./environment.nix
   ./softwares/spicetify.nix
+  ./softwares/obs.nix
   ];
 
   home.packages = with pkgs; [
     discord
+    webcord-vencord
     vivaldi
     github-desktop
     gimp-with-plugins
